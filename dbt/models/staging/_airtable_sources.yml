@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+- name: lh__airtable
+  database: lh__airtable
+  schema: dbo
+  tables:
+    - name: 
+    - name: 
+    - name: 
+    - name: 
