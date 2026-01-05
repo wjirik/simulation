@@ -5,7 +5,7 @@ sources:
   database: lh__airtable
   schema: dbo
   tables:
-    - name: 
-    - name: 
-    - name: 
-    - name: 
+    - name: customers
+    - name: invoice_header
+    - name: invoice_line
+    - name: item
