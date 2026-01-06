@@ -12,6 +12,58 @@ The Warehouse Simulator allows users to:
 - Learn data warehouse modeling concepts
 - Experiment with dimension and fact table structures
 
+## Training Overview
+
+### Pre-Warehouse Setup & Preparation
+- Source system setup
+- Future state diagraming
+
+### Data Extraction
+- Workspace setup
+- Pipeline configuration
+
+### Warehouse Implementation
+- Model creation
+- Querying data
+
+### Reporting & Insight
+- Central semantic model
+- Report creation
+
+## Prerequisites
+
+- Completion of the data literacy training material
+- Basic understanding of SQL & relational databases
+- Familiarity with data visualization tools
+- General awareness of purpose and value of a data warehouse
+- Microsoft Tenant with a Fabric Capacity or account with Fabric Trial Capacity
+- Service principal client and secret ID
+- Ability to install the requirement tools/software
+
+## Required Installations
+
+Ensure you have the below software installed to ensure things work smoothly in later sessions:
+
+- **Visual Studio Code** - [Download](https://code.visualstudio.com/download)
+- **Python 3.12.0** - [Download](https://www.python.org/downloads/)
+  - If this is your first time installing python you may have to add it to your PATH
+- **Git/Git Bash** - [Download](https://git-scm.com/downloads)
+- **ODBC Driver for Windows** - [Download Microsoft ODBC Driver 18 for SQL Server (x64)](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server)
+- **Power BI** - [Download](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
+
+> **Note:** If at any point you get stuck or blocked within this training or have feedback on how to improve this training, please reach out to your project consultant.
+
+## Helpful Links
+
+- [Starting Repository](https://github.com/billjirik/wh_simulation)
+- [DBT Documentation](https://docs.getdbt.com/docs/introduction)
+- [Service Principal Documentation](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal)
+- [Power BI Documentation](https://learn.microsoft.com/en-us/power-bi/)
+- [Draw IO/Diagramming Tool](https://app.diagrams.net/)
+- [Airtable](https://airtable.com/) & [Airtable Create Token](https://airtable.com/create/tokens)
+- [Airtable API Documentation](https://airtable.com/developers/web/api/list-records)
+- [Python Virtual Environment Documentation](https://docs.python.org/3/library/venv.html)
+
 ## Helpful Tips/Code Snippets
 
 ### File Associations
@@ -53,6 +105,9 @@ git commit -m "init"
 
 # Push to remote repository and set upstream
 git push --set-upstream origin main
+
+# Check the working tree status
+git status
 ```
 
 ### Useful Git Commands
@@ -89,6 +144,18 @@ dbt deps
 
 # Test DBT connection and configuration
 dbt debug
+
+# Build a specific model and its downstream dependencies
+dbt build -s {{model path or name}}
+
+# Build a specific model and all its upstream dependencies
+dbt build -s +{{model path or name}}
+
+# Generate DBT documentation
+dbt docs generate
+
+# Serve DBT documentation in a local web server
+dbt docs serve
 ```
 
 ### Branch Management
